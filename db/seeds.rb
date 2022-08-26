@@ -10,11 +10,11 @@ Movie.create(title: "The Shawshank Redemption", overview: "Framed in the 1940s f
 Movie.create(title: "Titanic", overview: "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic.", poster_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg", rating: 7.9)
 Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century.", poster_url: "https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg", rating: 7.0)
 
-response = RestClient.get "https://api.themoviedb.org/3 by http://tmdb.lewagon.com"
-repos = JSON.parse(response).first(10)
+# response = RestClient.get "https://api.themoviedb.org/3 by http://tmdb.lewagon.com"
+# repos = JSON.parse(response).first(10)
 
-repos.each do |repo|
-  JSON.parse(RestClient.get "https://api.themoviedb.org/3 by http://tmdb.lewagon.com#{repo}.json")
-  post = Movie.new(title: "title", overview: "overview", poster_url: "poster_path", rating: "vote_average")
-  post.save!
-end
+# repos.each do |repo|
+#   JSON.parse(RestClient.get "https://api.themoviedb.org/3 by http://tmdb.lewagon.com#{repo}.json")
+#   post = Movie.new(title: "title", overview: "overview", poster_url: "poster_path", rating: "vote_average")
+#   post.save!
+# end
